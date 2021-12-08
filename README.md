@@ -12,7 +12,7 @@ Generate multiple profile card on the modal window
 
 1. [react-profile_card](https://github.com/dafiqarba/react-profile_card) (24 November 2021)
 2. [react-form-modal](https://github.com/dafiqarba/react-form-modal) (2 Desember 2021)
-3. [react-dynamic-modal] (https://github.com/dafiqarba/react-dynamic-modal) (8 Desember 2021)
+3. [react-dynamic-modal](https://github.com/dafiqarba/react-dynamic-modal) (8 Desember 2021)
 
 ## Getting Started with Create React App
 <details>  
