@@ -1,5 +1,6 @@
 import { Wrapper, Card, CardText, Header, HeaderText, Name } from './../../styled-components/ModalWindow-styled';
 import { Batch, Content, DataContainer, DataLabel, Data } from './../../styled-components/ModalWindow-styled';
+import { Empty } from './../../styled-components/ModalWindow-styled';
 
 import ModalAvatar from './ModalAvatar';
 import ModalSocialMedia from './ModalSocialMedia';
@@ -9,7 +10,10 @@ function ModalWindow(props) {
 
   return (
     <Wrapper onClick={props.onClose} state={props.modalState} length={dataLength}>
-      {props.data.map((user) => (
+      {
+       dataLength === 0 ? <Empty>Empty Data</Empty> :
+      
+      props.data.map((user) => (
         <Card key={user.key} length={dataLength}>
           <ModalAvatar avatar={user.avatar} />
           <CardText>

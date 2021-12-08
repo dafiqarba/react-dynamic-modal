@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -19,14 +19,22 @@ export const ContentWrapper = styled.div`
 export const Button = styled.div`
   height: 2rem;
   text-align: right;
+`;
 
+const ButtonStyle = css`
+  font-weight: 600;
+  text-decoration: none;
+  color: #693f62;
+  border-bottom: 0.2rem dotted #693f62;
 `;
 
 export const ResetModal = styled.a.attrs({
-  href:"#"
+  href: '#',
+})`${ButtonStyle}`;
+
+export const ViewModal = styled.a.attrs({
+  href: '#',
 })`
-font-weight: 600;
-text-decoration: none;
-color: #693f62;
-border-bottom: .2rem dotted #693f62;
+  ${ButtonStyle};
+  margin-right: 2rem;
 `;

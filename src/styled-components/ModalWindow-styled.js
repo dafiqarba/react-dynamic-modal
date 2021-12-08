@@ -13,7 +13,7 @@ export const Wrapper = styled.div.attrs((props) => ({
   width: 100%;
   overflow-y: auto;
 
-  ${(props) => props.length === 1 && 'justify-content: center'};
+  ${(props) => (props.length === 1 || props.length === 0) && 'justify-content: center'};
   min-height: 100vh;
 
   font-family: 'Lato', sans-serif;
@@ -30,6 +30,12 @@ export const Wrapper = styled.div.attrs((props) => ({
   padding: 1rem 0 1rem 0;
   visibility: ${(props) => (props.state ? props.visible : props.hidden)};
   opacity: ${(props) => (props.state ? 1 : 0)};
+`;
+
+export const Empty = styled.div`
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
 `;
 
 export const Card = styled.div.attrs((props) => ({

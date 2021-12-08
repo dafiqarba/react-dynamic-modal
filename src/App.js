@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Wrapper, ContentWrapper, Button, ResetModal } from './styled-components/App-styled';
+import { Wrapper, ContentWrapper, Button, ResetModal, ViewModal } from './styled-components/App-styled';
 import FormProfile from './components/FormProfile/FormProfile';
 import ModalWindow from './components/ModalWindow/ModalWindow';
 
@@ -20,7 +20,7 @@ function App() {
       ];
     });
     setKey(key + 1);
-    setModalState(true);
+    
   };
 
   const closeHandler = () => {
@@ -28,16 +28,21 @@ function App() {
   };
   const resetHandler = () => {
     setUserData('');
+    setModalState(false);
   };
+  const openModal = () => {
+    setModalState(true);
+  }
   console.log(modalState);
   return (
     <Wrapper>
       <ContentWrapper>
         <FormProfile onSubmitData={submitDataHandler} />
         <Button>
+          <ViewModal onClick={openModal}>View Modal</ViewModal>
           <ResetModal onClick={resetHandler}>Reset Modal</ResetModal>
         </Button>
-        {modalState && <ModalWindow data={userData} modalState={modalState} onClose={closeHandler}/>}
+        <ModalWindow data={userData} modalState={modalState} onClose={closeHandler}/>
       </ContentWrapper>
     </Wrapper>
   );

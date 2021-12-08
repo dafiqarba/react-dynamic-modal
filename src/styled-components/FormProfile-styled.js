@@ -9,10 +9,46 @@ export const Form = styled.form.attrs({
 export const Header = styled.div`
   text-align: center;
   margin-bottom: 3rem;
+  margin-bottom: 1rem;
 `;
 
-export const Text = styled.h1`
+export const Text = styled.h1``;
+
+export const Notification = styled.div.attrs((props) => ({
+  close: props.close,
+  hidden: 'hidden',
+  visible: 'visible',
+}))`
+  background-color: #5bc6ac;
+
+  padding: 1rem;
   margin-bottom: 1rem;
+  color: #fff;
+  letter-spacing: 0.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  visibility: ${(props) => (props.close ? props.visible : props.hidden)};
+`;
+
+export const Success = styled.div`
+  font-size: 2rem;
+`;
+
+export const Close = styled.div`
+  display: flex;
+  width: 3rem;
+  height: 3rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export const FormField = styled.div`
