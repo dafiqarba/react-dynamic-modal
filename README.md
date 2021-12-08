@@ -2,6 +2,20 @@
 
 Generate multiple profile card on the modal window
 
+## Demo
+<details> 
+<summary> Expand</summary>
+
+### Form
+![Form](https://github.com/dafiqarba/react-dynamic-modal/blob/main/static/git-readme/form.png)
+### Save Success
+![Save Success](https://github.com/dafiqarba/react-dynamic-modal/blob/main/static/git-readme/success.png)
+### Open Profile Cards on the Modal Window
+![Open Modal](https://github.com/dafiqarba/react-dynamic-modal/blob/main/static/git-readme/openmodal.png)
+### Open Profile Cards after reset
+![Empty Modal](https://github.com/dafiqarba/react-dynamic-modal/blob/main/static/git-readme/emptydata.png)
+</details>
+
 ## Usage
 
 1. Clone the repo to your local dir.
