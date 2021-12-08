@@ -1,24 +1,19 @@
-import styled, { css } from 'styled-components';
-
-const Hidden = css`
-  visibility: hidden;
-  opacity: 0;
-`;
-
-const Visible = css`
-  visibility: visible;
-  opacity: 0;
-`;
+import styled from 'styled-components';
 
 export const Wrapper = styled.div.attrs((props) => ({
   state: props.state,
+  visible: 'visible',
+  hidden: 'hidden',
+  length: props.length,
 }))`
   display: flex;
   flex-direction: column;
-
   align-items: center;
-  justify-content: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
 
+  ${(props) => props.length === 1 && 'justify-content: center'};
   min-height: 100vh;
 
   font-family: 'Lato', sans-serif;
@@ -32,11 +27,13 @@ export const Wrapper = styled.div.attrs((props) => ({
   transition: all 0.35s ease-in;
 
   background-color: rgba(0, 0, 0, 0.7);
-  visibility: ${(props) => (props.state ? Visible : Hidden)};
+  padding: 1rem 0 1rem 0;
+  visibility: ${(props) => (props.state ? props.visible : props.hidden)};
+  opacity: ${(props) => (props.state ? 1 : 0)};
 `;
 
-export const Card = styled.div.attrs(props => ({
-  card : props.length,
+export const Card = styled.div.attrs((props) => ({
+  card: props.length,
   marginAmount: '1rem',
 }))`
   background-color: #f9f9f9;
@@ -47,8 +44,7 @@ export const Card = styled.div.attrs(props => ({
 
   display: flex;
   flex-direction: row;
-  margin-bottom: ${props => (props.card > 0) ? props.marginAmount : 0}
-
+  margin-bottom: ${(props) => (props.card > 0 ? props.marginAmount : 0)};
 `;
 
 export const CardText = styled.div`

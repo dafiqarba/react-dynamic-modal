@@ -129,8 +129,8 @@ export const Select = styled.select`
 
 export const ButtonField = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 5rem;
 
   margin-top: 2rem;
 `;

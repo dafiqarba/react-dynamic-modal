@@ -1,10 +1,12 @@
+import { Wrapper, ContentWrapper, Avatar } from './../../styled-components/ModalAvatar-styled';
+
 function ModalAvatar(props) {
   return (
-    <div className="card-avatar">
-      <div className="card-avatar__box">
-        <img alt="avatar" className="card-avatar__img" src={props.avatar} />
-      </div>
-    </div>
+    <Wrapper>
+      <ContentWrapper>
+        <Avatar src={props.avatar}></Avatar>
+      </ContentWrapper>
+    </Wrapper>
   );
 }
 

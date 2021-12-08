@@ -1,5 +1,4 @@
-import './ModalWindow.css';
-import { Card, CardText, Header, HeaderText, Name } from './../../styled-components/ModalWindow-styled';
+import { Wrapper, Card, CardText, Header, HeaderText, Name } from './../../styled-components/ModalWindow-styled';
 import { Batch, Content, DataContainer, DataLabel, Data } from './../../styled-components/ModalWindow-styled';
 
 import ModalAvatar from './ModalAvatar';
@@ -9,8 +8,7 @@ function ModalWindow(props) {
   const dataLength = props.data.length;
 
   return (
-    <div className={props.modalState ? 'modal-wrapper visible' : 'modal-wrapper invisible'} onClick={props.onClose}>
-      {console.log(props.data)}
+    <Wrapper onClick={props.onClose} state={props.modalState} length={dataLength}>
       {props.data.map((user) => (
         <Card key={user.key} length={dataLength}>
           <ModalAvatar avatar={user.avatar} />
@@ -51,7 +49,7 @@ function ModalWindow(props) {
           </CardText>
         </Card>
       ))}
-    </div>
+    </Wrapper>
   );
 }
 

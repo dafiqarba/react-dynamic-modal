@@ -1,5 +1,5 @@
 import { FormGroups, FormGroup, Label, InputRadioGroup } from '../../styled-components/FormProfile-styled';
-import { InputRadio, LabelRadio, RadioButton} from '../../styled-components/FormProfile-styled';
+import { InputRadio, LabelRadio, RadioButton } from '../../styled-components/FormProfile-styled';
 import { InputSelectGroup, Select } from '../../styled-components/FormProfile-styled';
 
 const SelectInput = (props) => {
@@ -34,8 +34,10 @@ const SelectInput = (props) => {
         <Label>Agama</Label>
         <InputSelectGroup>
           <Select onChange={props.onChange} name="religion">
-            {options.map(option => (
-              <option key={option.key} value={option.value}>{option.value}</option>
+            {options.map((option) => (
+              <option key={option.key} value={option.value}>
+                {option.value}
+              </option>
             ))}
           </Select>
         </InputSelectGroup>

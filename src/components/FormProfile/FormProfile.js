@@ -8,7 +8,6 @@ const FormProfile = (props) => {
   const [userData, setUserData] = useState({});
 
   const changeHandler = (event) => {
-    
     setUserData({
       ...userData,
       [event.target.name]: event.target.value,
@@ -48,6 +47,6 @@ const FormProfile = (props) => {
       </Form>
     </Fragment>
   );
-}
+};
 
 export default FormProfile;
