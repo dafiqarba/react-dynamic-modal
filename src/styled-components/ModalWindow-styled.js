@@ -16,8 +16,6 @@ export const Wrapper = styled.div.attrs((props) => ({
   ${(props) => (props.length === 1 || props.length === 0) && 'justify-content: center'};
   min-height: 100vh;
 
-  font-family: 'Lato', sans-serif;
-
   position: fixed;
   top: 0;
   left: 0;
